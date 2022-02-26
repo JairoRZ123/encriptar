@@ -1,0 +1,61 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ENCRIPTACION</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/styles/css/themes/lite-purple.min.css">
+    <link rel="stylesheet" href="/assets/styles/vendor/perfect-scrollbar.css" />
+    
+    <!-- Style css -->
+    <link rel="stylesheet" href="assets_index/css/style3.css">
+    
+
+</head>
+<body>
+
+
+
+            <div class="row">
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                    <div class="p-4">
+                        <div class="text-center mb-4">
+                            <img src="/image/Logotipos-UT.jpg" alt="">
+                        </div>
+                        <h1 class="mb-3 text-18">Bienvenido a la encriptacion</h1>
+                    <div id="app">
+                      
+                            <div>  <input type="password" size="50" minlengt="8" /></div>
+                            <br>
+                            <div><button type="submit" onclick="encriptar(this)">Encriptar</button></div>
+                            <br>
+                            <div><button type="submit" onclick="desencriptar(this)">Desencriptar</button></div>
+                    
+
+                    </div> 
+                    
+                    </div>
+                </div>
+            </div>
+
+
+
+<p id='resultado'></p>
+
+<script>
+function encriptar(elemento){
+    var palabra = document.getElementsByTagName("input")[0].value;
+    var palabra_codificada = btoa(palabra);
+    document.getElementById("resultado").innerHTML = palabra_codificada;
+}
+ 
+function desencriptar(elemento){
+    var palabra = document.getElementsByTagName("input")[0].value;
+    var palabra_descodificada = atob(palabra);
+    document.getElementById("resultado").innerHTML = palabra_descodificada;
+}
+</script>
+</body>
+</html>
